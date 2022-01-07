@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
-    <link href="static/css/map.css" rel="stylesheet">
+    <link href="{{ url_for('static', path='css/map.css')}}" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="nofoobar.com" content="Nofoobar">
@@ -24,5 +24,43 @@
     <!--Google map-->
     <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
         <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <!--Google map-->
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col"># of people</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">View</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>placeholder</td>
+                    <td>placeholder</td>
+                    <td>placeholder</td>
+                    <td><button>View</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>placeholder</td>
+                    <td>placeholder</td>
+                    <td>placeholder</td>
+                    <td><button>View</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>placeholder</td>
+                    <td>placeholder</td>
+                    <td>placeholder</td>
+                    <td><button>View</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
