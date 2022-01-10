@@ -2,12 +2,18 @@
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
-    <link href="{{ url_for('static', path='css/map.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', path='css/map.css?a')}}" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="nofoobar.com" content="Nofoobar">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script> 
+    <style>
+        #map {position: absolute; width: 100%; height: 95%;}
+    </style>
     {% block title %}
     {% endblock %}
 </head>
@@ -21,12 +27,20 @@
     {% block scripts %}
     {% endblock %}
 
-    <!--Google map-->
-    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
-        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="map-container">
+        <div id="map"></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
+            const map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/mapbox/streets-v11', // style URL
+                center: [-74.5, 40], // starting position [lng, lat]
+                zoom: 9 // starting zoom
+            });
+        </script>
     </div>
-    <!--Google map-->
 
+    <h2>Images</h2>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
@@ -44,23 +58,41 @@
                     <td>placeholder</td>
                     <td>placeholder</td>
                     <td>placeholder</td>
-                    <td><button>View</button></td>
+                    <td>
+                        <button id="show">View</button>
+                    </td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>placeholder</td>
                     <td>placeholder</td>
                     <td>placeholder</td>
-                    <td><button>View</button></td>
+                    <td>
+                        <button id="show">View</button>
+                    </td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>placeholder</td>
                     <td>placeholder</td>
                     <td>placeholder</td>
-                    <td><button>View</button></td>
+                    <td>
+                        <button id="show">View</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    <div class="background">
+        <div class="window">
+            <div class="popup">
+                <button id="close">close</button>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{url_for('static', path='js/test.js?a')}}"></script>
 </body>
