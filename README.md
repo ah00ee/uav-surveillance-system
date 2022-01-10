@@ -9,7 +9,9 @@
 │   │   └── map.css
 │   └── js
 │       └── test.js
-└── templates
-    ├── map.html
-    └── navbar.html
+├── templates
+│   ├── map.html
+│   └── navbar.html
+├── .gitignore
+└── README.md
 ``` 
