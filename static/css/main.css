@@ -15,8 +15,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -37,7 +35,6 @@
 #modal .title {
     padding-left: 10px;
     display: inline;
-    text-shadow: 1px 1px 2px gray;
     color: black;   
 }
 
@@ -57,6 +54,5 @@
 #modal .content {
     margin-top: 20px;
     padding: 0px 10px;
-    text-shadow: 1px 1px 2px gray;
     color: black;
 }
