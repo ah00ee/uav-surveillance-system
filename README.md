@@ -6,12 +6,13 @@
 │   └── main.py
 ├── static
 │   ├── css
-│   │   └── map.css
+│   │   └── main.css
 │   └── js
-│       └── test.js
+│       └── modal.js
 ├── templates
 │   ├── map.html
-│   └── navbar.html
+│   ├── navbar.html
+│   └── streamLive.html
 ├── .gitignore
 └── README.md
 ``` 
