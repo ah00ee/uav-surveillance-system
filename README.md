@@ -16,3 +16,8 @@
 ├── .gitignore
 └── README.md
 ``` 
+
+## Start running on localhost 
+```
+uvicorn app.main:app --reload
+```
